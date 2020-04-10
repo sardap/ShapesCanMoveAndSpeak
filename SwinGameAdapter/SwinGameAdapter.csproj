@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug-Windows</Configuration>
+    <ProjectGuid>{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}</ProjectGuid>
+    <RootNamespace>SwinGameAdapter</RootNamespace>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <AssemblyName>MyGame</AssemblyName>
+    <SuppressXamMacUpsell>True</SuppressXamMacUpsell>
+    <SuppressXamMacMigration>True</SuppressXamMacMigration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputType>Library</OutputType>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Windows|x86' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>false</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <UseSGen>false</UseSGen>
+    <UseRefCounting>false</UseRefCounting>
+    <Profiling>false</Profiling>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PrepareForRunDependsOn>$(PrepareForRunDependsOn);CopyLibsToOut</PrepareForRunDependsOn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY "$(ProjectDir)Resoruces" "$(TargetDir)\Resoruces\" /S /Y
+</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Adapter\Adapter.csproj">
+      <Project>{a7a8227f-b5ca-4e5e-ad71-22f7a361842d}</Project>
+      <Name>Adapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewShareLibary\ShareLibary.csproj">
+      <Project>{6f1cb19c-b43c-41e7-9342-72a578f970d8}</Project>
+      <Name>ShareLibary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\PointWraper.cs" />
+    <Compile Include="src\SwinGameResourceAdapter.cs" />
+    <Compile Include="src\SwinGameDrawAdatper.cs" />
+    <Compile Include="src\SwinGameInputAdapter.cs" />
+    <Compile Include="src\SwinGameUtilsAdapter.cs" />
+    <Compile Include="SwingameStaticMain.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="SwinGame">
+      <HintPath>lib\SwinGame.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <WinLibs Include="lib\win32\libcurl.dll" />
+    <WinLibs Include="lib\win32\libeay32.dll" />
+    <WinLibs Include="lib\win32\libFLAC-8.dll" />
+    <WinLibs Include="lib\win32\libfreetype-6.dll" />
+    <WinLibs Include="lib\win32\libidn-11.dll" />
+    <WinLibs Include="lib\win32\libjpeg-9.dll" />
+    <WinLibs Include="lib\win32\libmodplug-1.dll" />
+    <WinLibs Include="lib\win32\libogg-0.dll" />
+    <WinLibs Include="lib\win32\libpng16-16.dll" />
+    <WinLibs Include="lib\win32\librtmp.dll" />
+    <WinLibs Include="lib\win32\libSGSDL2.dll" />
+    <WinLibs Include="lib\win32\libssh2.dll" />
+    <WinLibs Include="lib\win32\libtiff-5.dll" />
+    <WinLibs Include="lib\win32\libvorbis-0.dll" />
+    <WinLibs Include="lib\win32\libvorbisfile-3.dll" />
+    <WinLibs Include="lib\win32\libwebp-4.dll" />
+    <WinLibs Include="lib\win32\SGSDK.dll" />
+    <WinLibs Include="lib\win32\smpeg2.dll" />
+    <WinLibs Include="lib\win32\ssleay32.dll" />
+    <WinLibs Include="lib\win32\zlib1.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\mac\" />
+    <Folder Include="Resoruces\animations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resoruces\bundles\FileDialog.txt" />
+    <Content Include="Resoruces\bundles\splash.txt" />
+    <Content Include="Resoruces\images\fdFile.png" />
+    <Content Include="Resoruces\images\fdFolder.png" />
+    <Content Include="Resoruces\images\FileDialog_Active.png" />
+    <Content Include="Resoruces\images\FileDialog_Background.png" />
+    <Content Include="Resoruces\images\FileDialog_Inactive.png" />
+    <Content Include="Resoruces\images\FileDialog_Scroll.png" />
+    <Content Include="Resoruces\images\FileDialog_ScrollSmall.png" />
+    <Content Include="Resoruces\images\Swinburne.jpg" />
+    <Content Include="Resoruces\images\SwinGameAni.png" />
+    <Content Include="Resoruces\Names.txt" />
+    <Content Include="Resoruces\panels\FileDialog.txt" />
+    <Content Include="Resoruces\sounds\background01.wav" />
+    <Content Include="Resoruces\SwinGame.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\DependencyValidation1\DependencyValidation1.layerdiagram">
+      <Link>DependencyValidation1.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Resoruces\fonts\arial.ttf" />
+    <None Include="Resoruces\fonts\cour.ttf" />
+    <None Include="Resoruces\fonts\maven_pro_regular.ttf" />
+    <None Include="Resoruces\SwinGame.icns" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.9.0\analyzers\dotnet\cs\Microsoft.DependencyValidation.Analyzers.resources.dll" />
+  </ItemGroup>
+  <Target Name="CopyLibsToOut">
+    <Copy SourceFiles="@(WinLibs)" DestinationFolder="$(OutDir)" />
+  </Target>
+</Project>

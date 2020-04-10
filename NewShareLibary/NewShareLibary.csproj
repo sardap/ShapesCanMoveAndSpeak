@@ -1,0 +1,8 @@
+Factory _factory = new Factory();
+GameTimer _tmr;
+World _world;
+GraphicsManager _graphics = new GraphicsManager();
+InputManger _input = new InputManger();
+UserInterfaceManger _ui;
+CollsionManger _collsion;
+SoundManger _sound;

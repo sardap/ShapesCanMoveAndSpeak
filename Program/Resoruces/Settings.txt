@@ -1,0 +1,9 @@
+﻿[FileLocations]
+BACKGROUND_MUSIC_FILENAME = Resoruces\sounds\background01.wav
+NAMES_FILENAME = Resoruces\Names.txt
+NAME_FONT_FILENAME = Resoruces\fonts\cour.ttf
+
+[Window]
+WINDOW_TITLE = "Circles?"
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600

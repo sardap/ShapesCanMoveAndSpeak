@@ -1,0 +1,15 @@
+:CIRCLES:
+Hank
+Karl
+Mov
+:TRIANGLES:
+Max
+Marx
+Conner
+:HEXAGONS:
+Phill
+Barry
+Craig
+:SQAURES:
+Bee
+Wallet

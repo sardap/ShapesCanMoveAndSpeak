@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SharedLibary.Colour" Collapsed="true">
+    <Position X="17.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAEAAAAAAAAAgAQgAAAAAAABAAAgAAAAAAAKAEgAQE=</HashCode>
+      <FileName>src\Color\Color.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedLibary.Font" Collapsed="true">
+    <Position X="15.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAgAAAAABAAAIAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>src\Font\Font.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedLibary.UtilsWraper" Collapsed="true">
+    <Position X="17.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>src\Input\KeyCodeWraper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedLibary.BreathingRectangle">
+    <Position X="4" Y="14.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Shape\BreathingRectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedLibary.Circle">
+    <Position X="13" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAhAAABAAAAAAAAgAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>src\Shape\Circle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedLibary.CollsionDetector" Collapsed="true">
+    <Position X="15.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>src\Shape\CollsionDetector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedLibary.Ellipse">
+    <Position X="1.25" Y="14.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAhAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Shape\Ellipse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedLibary.Hexagon">
+    <Position X="7.5" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAhAABBCAAAAAAAgAAAAAAAAAAAAMIAAA=</HashCode>
+      <FileName>src\Shape\Hexagon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedLibary.Point2D">
+    <Position X="7" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAA4AAgAAAAAICAAAAAAACBAAAAAAAAAAAYAE=</HashCode>
+      <FileName>src\Shape\Point2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedLibary.Rectangle">
+    <Position X="3" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAghEAEBAADAGAAAoABAAAAAAACAAAIAAA=</HashCode>
+      <FileName>src\Shape\Rectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedLibary.Shape">
+    <Position X="7.25" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAhAAABAAAAAAAAgAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>src\Shape\Shape.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedLibary.Triangle">
+    <Position X="10.25" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAhAAABAQAAAAAA0AIAAAAAAAAQAIIAAA=</HashCode>
+      <FileName>src\Shape\Triangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SharedLibary.KeyCode" Collapsed="true">
+    <Position X="15.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ysgJA6ENsjMi+HBQecCjgQo6cLkWkiVgIkcOjKT8Pww=</HashCode>
+      <FileName>src\Input\KeyCodes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SharedLibary.MouseButton" Collapsed="true">
+    <Position X="17.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAABAACAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>src\MouseInfo\MouseButton.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SharedLibary.MouseState" Collapsed="true">
+    <Position X="15.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAI=</HashCode>
+      <FileName>src\MouseInfo\MouseState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

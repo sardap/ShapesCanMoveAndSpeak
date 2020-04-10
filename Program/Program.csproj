@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9AB41D2D-D07C-4817-8F13-CEEE5E30D2C1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Program</RootNamespace>
+    <AssemblyName>Program</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Resoruces\fonts\arial.ttf" />
+    <None Include="Resoruces\fonts\cour.ttf" />
+    <None Include="Resoruces\fonts\maven_pro_regular.ttf" />
+    <None Include="Resoruces\SwinGame.icns" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Adapter\Adapter.csproj">
+      <Project>{a7a8227f-b5ca-4e5e-ad71-22f7a361842d}</Project>
+      <Name>Adapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Game\Game.csproj">
+      <Project>{e697e104-3399-4157-996d-118aa653d3d6}</Project>
+      <Name>Game</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonoGameAdatper\MonoGameAdatper.csproj">
+      <Project>{7caa2f25-8ce6-4eda-a0ee-7fefcd427579}</Project>
+      <Name>MonoGameAdatper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SplashKitAdapter\SplashKitAdapter.csproj">
+      <Project>{eb079f01-e1fb-4105-8f08-116d7d0230fd}</Project>
+      <Name>SplashKitAdapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SwinGameAdapter\SwinGameAdapter.csproj">
+      <Project>{a9dcac72-bc77-4c33-be70-bbfd31d7c798}</Project>
+      <Name>SwinGameAdapter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resoruces\bundles\FileDialog.txt" />
+    <Content Include="Resoruces\bundles\splash.txt" />
+    <Content Include="Resoruces\images\fdFile.png" />
+    <Content Include="Resoruces\images\fdFolder.png" />
+    <Content Include="Resoruces\images\FileDialog_Active.png" />
+    <Content Include="Resoruces\images\FileDialog_Background.png" />
+    <Content Include="Resoruces\images\FileDialog_Inactive.png" />
+    <Content Include="Resoruces\images\FileDialog_Scroll.png" />
+    <Content Include="Resoruces\images\FileDialog_ScrollSmall.png" />
+    <Content Include="Resoruces\images\Swinburne.jpg" />
+    <Content Include="Resoruces\images\SwinGameAni.png" />
+    <Content Include="Resoruces\Names.txt" />
+    <Content Include="Resoruces\panels\FileDialog.txt" />
+    <Content Include="Resoruces\sounds\background01.wav" />
+    <Content Include="Resoruces\SwinGame.ico" />
+    <Content Include="Resoruces\Settings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resoruces\animations\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY "$(ProjectDir)Resoruces" "$(TargetDir)\Resoruces\" /S /Y
+XCOPY "$(SolutionDir)SwinGameAdapter\XCOPY" "$(TargetDir)" /S /Y
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

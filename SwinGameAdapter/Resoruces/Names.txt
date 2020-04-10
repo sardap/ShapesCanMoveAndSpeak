@@ -1,0 +1,12 @@
+:CIRCLES:
+Paul
+Ceasear
+Sqaure
+BitchBoy
+Food
+:TRIANGLES:
+Asshole
+Hexagaon
+speaker
+:ELLIPSE:
+Jacques
